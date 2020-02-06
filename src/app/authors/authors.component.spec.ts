@@ -52,7 +52,7 @@ describe('AuthorsComponent', () => {
     await expect(component).toBeTruthy();
   });
  
-  it('show all the authors', async () =>  {
+  it('show all the authors', async (done) =>  {
     // await new Promise( (resolve, reject) => {
     //   setTimeout(() => {
     //     resolve()
@@ -62,6 +62,7 @@ describe('AuthorsComponent', () => {
     fixture.detectChanges();
     const authorElements = fixture.debugElement.queryAll(By.css('.author'));
     expect(authorElements.length).toBeGreaterThan(3);
+    done();
 }})});
 
   // it('Elements of class jqx-tree-item-li found using getElementsByClassName ', (done) => {
